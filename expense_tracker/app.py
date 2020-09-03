@@ -53,7 +53,7 @@ def process_workbook():
     cell1 = sheet.cell(currMaxRow, 1)
     cell1.value = str(items)
     cell2 = sheet.cell(currMaxRow, 2)
-    cell2.value = int(totalCost)
+    cell2.value = float(totalCost)
     cell3 = sheet.cell(currMaxRow, 3)
     cell3.value = str(purchaseDate)
 
@@ -61,6 +61,7 @@ def process_workbook():
         workbook.save("expenses.xlsx")
     except PermissionError:
         print("Permission denied, the file is already open!")
+        exit()
         
 
 process_workbook()
