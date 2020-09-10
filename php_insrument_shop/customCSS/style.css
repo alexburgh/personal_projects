@@ -1,0 +1,267 @@
+@charset "ISO-8859-1";
+
+/* body {
+	background-image: url("WebContent/media-resources/body-background.jpg");
+} */
+
+/* eroare formular */ 
+.form-submit-error {
+	background-color: #B22222; 
+	color: white;
+	padding: 3px; 
+	border-radius: 5px;
+	width: 90%;
+	margin: auto;
+}
+
+input.insert-product-button {
+	width: 30% !important;
+	margin: auto;
+}
+
+div.form-submit-error > p {
+	margin-top: unset;
+	margin-bottom: unset;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+div.email-error {
+    background-color: #B22222; 
+    color: white;
+    padding: 3px; 
+	border-radius: 5px;
+	width: 90%;
+	margin: auto;
+}
+
+div.email-error > p {
+    margin-top: unset;
+    margin-bottom: unset;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* ########## Pagina login ########## */
+
+div.form-container-login {
+	margin: auto;
+	margin-top: 15%
+}
+div.insert-product-container, div.update-product-container {
+	/* border: 1px solid; */
+    padding: 25px;
+    border-radius: 10px;
+	background-color: #F8F9FA;
+	margin: auto;
+	margin-bottom: 4%;
+}
+
+div.admin-panel {
+	border: 1px solid grey;
+	border-radius: 10px; 
+	padding: 20px;
+}
+
+div.admin-panel > h5 {
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+
+.mainContent, .update-product-form-maincontainer {
+	padding-bottom: 50px;
+	padding-top: 50px;
+}
+
+/* login error message */
+.login-error_message {
+	color: red;
+}
+
+#formCategorieProdus {
+	margin-bottom: 50px;
+}
+
+/* ########## pagina finalizare register ########## */
+div.registered-container {
+	margin: auto; 
+	text-align: center; 
+	width: 30%;
+}
+
+/* ########## Homepage ########## */
+header.mainHeader {
+	margin-bottom: 50px;
+	font-weight: bold;
+	color:#84bd00;
+	font-size: 40px;
+	font-family: Verdana, Tahoma, sans-serif;
+}
+
+thead {
+	background: #84bd00;
+	color: white;
+}
+
+.homeInputButton {
+	background: #84bd00;
+	border-radius: 10px;
+	color: white;
+	font-weight: bold;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.nrProduseCart {
+	text-align: center; 
+	padding: 0 0.9rem 0.1rem 0.9rem;
+	border-radius: 0.3rem;
+}
+
+/* Admin panel */
+div.admin-panel {
+	margin-bottom: 40px;
+}
+
+/* number of products in cart in the header */
+span.nr-produse-cos {
+	border: 1px solid #84bd00;
+	padding: 5px 10px 7px 8px;
+	background: #84bd00;
+	border-radius: 15px;
+	color: #FFF;
+}
+
+/* Pagina rezultate categorie */
+
+.rezultateHeading {
+	margin-bottom: 50px;
+	font-size: 1.5rem;
+}
+
+.add-to-cart-button {
+	background: #84bd00;
+	border: 1px solid #84bd00;
+
+}
+
+.btn.btn-primary:hover {
+	background: #037f51;
+	border: 1px solid #037f51;
+} 
+
+.submit-button {
+	background: #84bd00;
+	border: 1px solid #84bd00;
+}
+
+.buttonSection {
+	padding-top: 50px;
+}
+
+.buttonSection a {
+	background: #84bd00;
+	border: 1px solid #84bd00;
+}
+
+.buttonSection a:hover, .buttonSection a:active, .buttonSection a:focus {
+	background: #037f51;
+	border: 1px solid #037f51;
+}
+
+
+/* ########## PAGINA CONFIRMARE TRANZACTIE ########## */
+
+.lastPageButton {
+	margin-left: 2%;
+}
+
+/* ######### ULTIMA PAGINA ########## */
+h3.comandaPlasata {
+	margin-bottom: 30px;
+	color: #84bd00;
+}
+
+/* ########## Pagina cos de cumparaturi ########## */
+.pret-total-container {
+	border: 1px solid #84bd00;
+	border-radius: 5px; 
+	background: #84bd00;
+}
+
+.pret-total-container > p:first-child {
+	display: inline-block;
+	margin-top: 1rem; 
+	margin-bottom: 1rem;
+}
+
+.pret-total-produse-field-container {
+	display: inline-block;
+	margin-left: 2rem;
+}
+
+.pret-total-produse-field-container > p {
+	margin-top: 1rem; 
+	margin-bottom: 1rem;
+	color: white; 
+	font-weight: bold;
+}
+
+.comanda-button-container {
+	margin-top: 5.5rem;
+}
+
+/* empty cart */ 
+div.empty-cart {
+	margin: auto;
+}
+
+.empty-cart-title {
+	font-size: 1.2rem;
+	margin: 20px;
+}
+
+a.empty-cart-button {
+	margin: 30px;
+}
+
+/* ########## Pagina confirmare comanda ########## */ 
+span.required-star {
+	color: red;
+}
+
+#formCautareProdus {
+	margin-bottom: 50px;
+}
+
+.form-control {
+	margin: auto;
+	width: 90%;
+} 
+
+.formContainer {
+	width: 50%;
+	padding: 50px;
+	box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.1);
+	margin-top: 7rem;
+}
+
+label {
+	margin-bottom: unset;
+}
+
+.requiredStar {
+	color: red;
+}
+
+.container-tabel-produs-final {
+	margin-bottom: 50px;
+}
+
+h5.final-form-title {
+	padding-bottom: 30px;
+}
+
+input.buton-plasare-comanda {
+	margin-top: 20px;
+}
