@@ -86,6 +86,7 @@
 	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 	<link href="customCSS/style.css" rel="stylesheet" type="text/css"/>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="scripts/insert-product-reveal.js"></script>
 	<title>Cautare</title>
 </head>
 <body>
@@ -105,14 +106,9 @@
 			<div class="container admin-panel col-md-6">
 				<h5>Admin panel</h5>
 				<!-- sectiune inserare produs nou -->
-				<div class="insert-product-container text-center">
-					<h5><?php
-						if(filter_input(INPUT_GET, 'action') == 'update') {
-							echo "Actualizare produs '{$denumireProdEditat}':";
-						} else {
-							echo "Inserare produs:";
-						}
-					?></h5>
+				<button type="button" class="btn btn-success insert-product-reveal" onclick="showInsertSection()">Inserare produs</button>
+				<div id="insert-product-adminsect" class="insert-product-container text-center" style="display: none;"> <!-- inline style needed for button script to run properly -->
+					<h5>Inserare Produs</h5>
 					<form class="insert-product-form" method="post" action="index.php">
 						<div class="form-group">
 							<?php 
@@ -122,11 +118,7 @@
 									}
 								}
 							?>
-							<input type="text" name="product-insert-name" class="form-control" 
-								value="<?php if(filter_input(INPUT_GET, 'action') == 'update') {
-											echo $denumireProdEditat;
-										} ?>" 
-								placeholder="Denumire produs...">
+							<input type="text" name="product-insert-name" class="form-control" placeholder="Denumire produs...">
 						</div>
 						<div class="form-group">
 							<?php 
@@ -136,14 +128,9 @@
 									}
 								}
 							?>
-							<input type="number" name="product-insert-price" class="form-control"
-								value="<?php if(filter_input(INPUT_GET, 'action') == 'update') {
-											echo $pretProdEditat;
-										} ?>"
-							 	placeholder="Pret...">
+							<input type="number" name="product-insert-price" class="form-control" placeholder="Pret...">
 						</div>
 						<div class="form-group">
-							<!-- <label for="categorie-produs-insert-dropdown">Alegere categorie:</label> -->
 							<?php 
 								if(isset($_POST['insert-product'])) {
 									if(empty($_POST['product-insert-category'])) {
@@ -153,15 +140,7 @@
 							?>
 							<select class="form-control" name="product-insert-category" id="categorie-produs-insert-dropdown">
 							<!-- generate list items in a loop from the database category table -->
-								<option value="" selected disabled hidden><?php 
-									if(filter_input(INPUT_GET, 'action') == 'update') {
-											$gc = new GestiuneCategorii();
-											echo $gc->getNumeCategorie($idCategProdEditat);
-											unset($gc);
-									} else {
-										echo "--Alegeti o categorie din lista--";
-									} ?>
-								</option>
+								<option value="" selected disabled hidden>--Alegeti o categorie din lista--</option>
 								<?php 
 									$gc = new GestiuneCategorii();
 									$categorii = $gc->getCategorii();
@@ -173,11 +152,7 @@
 							</select>
 						</div>
 						<div class="form-group">
-							<input type="text" name="product-insert-sku" class="form-control" 
-								value="<?php if(filter_input(INPUT_GET, 'action') == 'update') {
-											echo $skuProdEditat;
-										} ?>"
-								placeholder="SKU...">
+							<input type="text" name="product-insert-sku" class="form-control" placeholder="SKU...">
 						</div>
 						<div class="form-group">
 							<?php 
@@ -187,19 +162,10 @@
 									}
 								}
 							?>
-							<input type="number" name="product-insert-stock" class="form-control" 
-								value="<?php if(filter_input(INPUT_GET, 'action') == 'update') {
-											echo $stocProdEditat;
-										} ?>"
-								placeholder="Stoc...">
+							<input type="number" name="product-insert-stock" class="form-control" placeholder="Stoc...">
 						</div>
 						<div class="form-group">
-							<input type="submit" name="insert-product" class="btn btn-outline-success btn-lg  btn-block insert-product-button" 
-								value="<?php if(filter_input(INPUT_GET, 'action') == 'update') {
-										echo 'Actualizare';
-									} else {
-										echo 'Inserare';
-							}?>">
+							<input type="submit" name="insert-product" class="btn btn-outline-success btn-lg  btn-block insert-product-button" value="Inserare">
 						</div>
 					</form>
 				</div>

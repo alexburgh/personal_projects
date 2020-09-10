@@ -48,6 +48,7 @@ div.form-container-login {
 	margin: auto;
 	margin-top: 15%
 }
+
 div.insert-product-container, div.update-product-container {
 	/* border: 1px solid; */
     padding: 25px;
@@ -56,6 +57,8 @@ div.insert-product-container, div.update-product-container {
 	margin: auto;
 	margin-bottom: 4%;
 }
+
+/* Admin panel */
 
 div.admin-panel {
 	border: 1px solid grey;
@@ -66,6 +69,12 @@ div.admin-panel {
 div.admin-panel > h5 {
 	padding-top: 5px;
 	padding-bottom: 10px;
+}
+
+.insert-product-reveal {
+	margin-bottom: 0.8rem;
+	background-color: #84BD00;
+	border-color: #84BD00;
 }
 
 .mainContent, .update-product-form-maincontainer {
