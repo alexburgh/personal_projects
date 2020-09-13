@@ -1,6 +1,5 @@
 import openpyxl as xl
 from openpyxl.utils.exceptions import InvalidFileException
-from openpyxl.chart import BarChart, reference 
 from datetime import date
 
 def process_workbook():
