@@ -35,7 +35,10 @@ elif site == "reddit" or site == "Reddit" or site == '3':
     url = "https://www.reddit.com/search/?q={}"
 elif site == "Stack Exchange" or site == "stack exchange" or site == "stackexchange" or site == '4':
     url = "https://stackexchange.com/search?q={}"
-
+else:
+    print("The option you entered is not valid!")
+    exit()
+    
 search_terms = search_input()
 initiate_search(url, search_terms)
 
